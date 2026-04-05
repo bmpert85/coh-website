@@ -415,4 +415,15 @@ function toggleMenu(){
   }
 }
 function mss(id){toggleMenu();setTimeout(function(){ss(id)},200)}
-window.addEventListene
+window.addEventListener('scroll',function(){
+  var n=document.getElementById('main-nav');
+  if(window.scrollY>50){n.classList.add('scrolled')}else{n.classList.remove('scrolled')}
+});
+var ro=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis')}})
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+document.querySelector('footer svg').style.margin='0 auto';
+</script>
+</body>
+</html>
