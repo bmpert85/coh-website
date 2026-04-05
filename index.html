@@ -54,6 +54,8 @@ nav.scrolled{background:rgba(15,15,15,0.92);backdrop-filter:blur(16px);border-bo
 .media-link:hover{color:#C4873B}
 @media(max-width:768px){
   .nav-links{display:none !important}
+  .mobile-menu-btn{display:flex !important}
+  .mobile-menu.open{display:flex !important}
   .g2{grid-template-columns:1fr !important;gap:40px !important}
   .strip4{grid-template-columns:repeat(2,1fr) !important;max-height:none !important}
   .svc2{grid-template-columns:1fr !important}
@@ -63,7 +65,13 @@ nav.scrolled{background:rgba(15,15,15,0.92);backdrop-filter:blur(16px);border-bo
   h1{font-size:36px !important}
   h2{font-size:28px !important}
   .impact-grid{grid-template-columns:1fr !important}
+  .impact-grid{grid-template-columns:1fr !important}
 }
+.mobile-menu-btn{display:none;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:8px;z-index:200}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,15,15,0.97);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.mobile-menu a,.mobile-menu button{font-family:'Outfit',system-ui,sans-serif;font-size:18px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(232,226,216,0.55);background:none;border:none;cursor:pointer;text-decoration:none;padding:12px 0;transition:color 0.2s}
+.mobile-menu a:hover,.mobile-menu button:hover{color:#C4873B}
+.mobile-menu .donate-mobile{font-size:14px;font-weight:500;background:#C4873B;color:#0F0F0F;padding:14px 36px;margin-top:16px;letter-spacing:0.08em}
 </style>
 </head>
 <body>
@@ -84,8 +92,22 @@ nav.scrolled{background:rgba(15,15,15,0.92);backdrop-filter:blur(16px);border-bo
       <button class="nav-btn" onclick="ss('connect')">Connect</button>
       <a href="https://donorbox.org/central-outreach-hub" target="_blank" rel="noopener noreferrer" class="donate-nav">Donate</a>
     </div>
+    <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
+      <svg id="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F5F0E8" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <button onclick="mss('about')">About</button>
+  <button onclick="mss('impact')">Impact</button>
+  <button onclick="mss('model')">Model</button>
+  <button onclick="mss('services')">Services</button>
+  <button onclick="mss('visit')">Visit</button>
+  <button onclick="mss('connect')">Connect</button>
+  <a href="https://donorbox.org/central-outreach-hub" target="_blank" rel="noopener noreferrer" class="donate-mobile">Donate</a>
+</div>
 
 <!-- HERO -->
 <section id="hero" class="sec" style="min-height:100vh;display:flex;align-items:center;padding:0 32px;position:relative;overflow:hidden">
@@ -381,4 +403,16 @@ nav.scrolled{background:rgba(15,15,15,0.92);backdrop-filter:blur(16px);border-bo
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function ss(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
+function toggleMenu(){
+  var m=document.getElementById('mobile-menu');
+  var i=document.getElementById('menu-icon');
+  if(m.classList.contains('open')){
+    m.classList.remove('open');
+    i.innerHTML='<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  }else{
+    m.classList.add('open');
+    i.innerHTML='<line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/>';
+  }
+}
+function mss(id){toggleMenu();setTimeout(function(){ss(id)},200)}
 window.addEventListene
