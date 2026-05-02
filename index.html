@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Peer-led coordination hub in downtown Calgary connecting individuals to housing, health, and social services through aligned partner organizations.">
-<meta name="keywords" content="Central Outreach Hub, Calgary, peer-led, homelessness, day space, housing stability, Indigenous services">
-<meta property="og:title" content="Central Outreach Hub | Calgary, Alberta">
-<meta property="og:description" content="Peer-led coordination hub maintaining consistent engagement with individuals disconnected from housing, health, and social systems.">
-<meta property="og:type" content="website">
-<title>Central Outreach Hub | Calgary, Alberta</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-::selection{background:rgba(196,135,59,0.3);color:#F5F0E8}
-body{background:#0F0F0F;color:#E8E2D8;font-family:'Outfit',system-ui,sans-serif;margin:0;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit}
-button{font-family:inherit}
-img{display:block;max-width:100%}
-.mx{max-width:1000px;margin:0 auto}
-.hr{width:100%;height:1px;background:rgba(232,226,216,0.08)}
-.pad{padding:0 32px}
-.sec{padding:120px 32px}
-.heading{font-family:'Instrument Serif','Georgia',serif}
-.body{font-family:'Outfit',system-ui,sans-serif}
-.label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#C4873B;margin-bottom:20px;font-weight:500}
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1),transform 0.9s cubic-bezier(0.16,1,0.3,1)}
-.reveal.vis{opacity:1;transform:translateY(0)}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:80px}
-.strip4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:2px}
-.svc2{display:grid;grid-template-columns:1fr 1fr;gap:0}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;transition:all 0.4s ease;border-bottom:1px solid transparent}
-nav.scrolled{background:rgba(15,15,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,226,216,0.08)}
-.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
-.nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer;text-decoration:none}
-.nav-links{display:flex;gap:4px;align-items:center}
-.nav-btn{font-size:12px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:rgba(232,226,216,0.55);background:none;border:none;cursor:pointer;padding:8px 14px;transition:color 0.2s}
-.nav-btn:hover,.nav-btn.active{color:#C4873B}
-.donate-nav{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;background:#C4873B;color:#0F0F0F;padding:8px 18px;text-decoration:none;margin-left:8px;display:inline-block}
-.accent{color:#C4873B}
-.muted{color:rgba(232,226,216,0.55)}
-.faint{color:rgba(232,226,216,0.3)}
-.white{color:#F5F0E8}
-.glow{background:rgba(196,135,59,0.06)}
-.divt{border-top:1px solid rgba(232,226,216,0.08)}
-.divb{border-bottom:1px solid rgba(232,226,216,0.08)}
-.divl{border-left:1px solid rgba(232,226,216,0.08)}
-.social-link{font-size:12px;color:rgba(232,226,216,0.3);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
-.social-link:hover{color:#C4873B}
-.media-link{font-family:'Instrument Serif','Georgia',serif;font-size:16px;color:rgba(232,226,216,0.3);text-decoration:none;white-space:nowrap;transition:color 0.2s}
-.media-link:hover{color:#C4873B}
-@media(max-width:768px){
-  .nav-links{display:none !important}
-  .mobile-menu-btn{display:flex !important}
-  .mobile-menu.open{display:flex !important}
-  .g2{grid-template-columns:1fr !important;gap:40px !important}
-  .strip4{grid-template-columns:repeat(2,1fr) !important;max-height:none !important}
-  .svc2{grid-template-columns:1fr !important}
-  .svc2>div{border-right:none !important}
-  .sec{padding:72px 20px !important}
-  .pad{padding:0 16px !important}
-  h1{font-size:36px !important}
-  h2{font-size:28px !important}
-  .impact-grid{grid-template-columns:1fr !important}
-  .impact-grid{grid-template-columns:1fr !important}
-}
-.mobile-menu-btn{display:none;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:8px;z-index:200}
-.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(15,15,15,0.97);z-index:150;flex-direction:column;align-items:center;justify-content:center;gap:24px}
-.mobile-menu a,.mobile-menu button{font-family:'Outfit',system-ui,sans-serif;font-size:18px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(232,226,216,0.55);background:none;border:none;cursor:pointer;text-decoration:none;padding:12px 0;transition:color 0.2s}
-.mobile-menu a:hover,.mobile-menu button:hover{color:#C4873B}
-.mobile-menu .donate-mobile{font-size:14px;font-weight:500;background:#C4873B;color:#0F0F0F;padding:14px 36px;margin-top:16px;letter-spacing:0.08em}
-</style>
+  <!-- Character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Central Outreach Hub | Peer-Led Day Space in Downtown Calgary</title>
+
+  <!-- Primary meta description (this is what Google shows in search results) -->
+  <meta name="description" content="Central Outreach Hub is a peer-led, low-barrier day space in downtown Calgary providing meals, connection, and culturally grounded support for people experiencing homelessness and housing instability.">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://centraloutreachhub.ca">
+
+  <!-- Search engine indexing -->
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (Facebook, LinkedIn, most platforms) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Central Outreach Hub">
+  <meta property="og:title" content="Central Outreach Hub">
+  <meta property="og:description" content="Peer-led day space in downtown Calgary. Meals, connection, and support for people experiencing homelessness and housing instability.">
+  <meta property="og:url" content="https://centraloutreachhub.ca">
+  <meta property="og:image" content="https://centraloutreachhub.ca/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_CA">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Central Outreach Hub">
+  <meta name="twitter:description" content="Peer-led day space in downtown Calgary. Meals, connection, and support for people experiencing homelessness and housing instability.">
+  <meta name="twitter:image" content="https://centraloutreachhub.ca/og-image.jpg">
+
+  <!-- Theme color (browser UI on mobile) -->
+  <meta name="theme-color" content="#1F4D4F">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Google Fonts (Source Sans 3 + Libre Baskerville) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Structured data: tells Google this is a nonprofit local organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Central Outreach Hub",
+    "alternateName": "COH",
+    "description": "Peer-led, low-barrier day space in downtown Calgary providing meals, connection, and culturally grounded support for people experiencing homelessness and housing instability.",
+    "url": "https://centraloutreachhub.ca",
+    "logo": "https://centraloutreachhub.ca/logo.png",
+    "image": "https://centraloutreachhub.ca/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "131 7 Ave SW",
+      "addressLocality": "Calgary",
+      "addressRegion": "AB",
+      "addressCountry": "CA"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Calgary"
+    }
+  }
+  </script>
+
+  <!-- Your existing stylesheet links go below this line -->
 </head>
 <body>
 
