@@ -1,0 +1,8 @@
+# Central Outreach Hub - robots.txt
+# Last updated: 2026-05-28
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://centraloutreachhub.ca/sitemap.xml
