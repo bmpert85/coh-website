@@ -520,3 +520,20 @@ function toggleMenu(){
     m.classList.remove('open');
     i.innerHTML='<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
   }else{
+    m.classList.add('open');
+    i.innerHTML='<line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/>';
+  }
+}
+function mss(id){toggleMenu();setTimeout(function(){ss(id)},200)}
+window.addEventListener('scroll',function(){
+  var n=document.getElementById('main-nav');
+  if(window.scrollY>50){n.classList.add('scrolled')}else{n.classList.remove('scrolled')}
+});
+var ro=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis')}})
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+document.querySelector('footer svg').style.margin='0 auto';
+</script>
+</body>
+</html>
