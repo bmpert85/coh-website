@@ -1,5 +1,4 @@
-/* Central Outreach Hub site styles. Follows COH Brand Standard v1.0.
-   Black and gold cover, white document panels on Warm Paper. */
+/* Central Outreach Hub site styles. Black throughout, with gold and cream. */
 :root {
   --black: #0F0F0F;
   --gold: #C3873C;
@@ -9,12 +8,15 @@
   --rule: #DDD4C4;
   --muted: #5A554C;
   --cover-soft: #CFC8BB;
+  --cream: #F5F0E8;
+  --panel: #171717;
+  --line: #2E2E2E;
   --head: "Jost", "Century Gothic", "Avenir Next", sans-serif;
   --body: "Source Sans 3", Calibri, "Segoe UI", sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--paper); color: var(--black); font-family: var(--body); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--black); color: var(--cream); font-family: var(--body); font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
 img { max-width: 100%; height: auto; display: block; }
 h1, h2, h3 { font-family: var(--head); font-weight: 600; margin: 0; text-wrap: balance; }
 p, ul, ol, figure, dl, dd { margin: 0; }
@@ -35,7 +37,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 .topbar nav a.give { background: var(--gold); color: var(--black); font-family: var(--head); font-weight: 600; padding: 6px 14px; }
 .topbar nav a.give:hover { color: var(--black); background: #D29A52; }
 /* The mural in the Hub room sits behind the cover text */
-.mural { background: linear-gradient(90deg, rgba(15,15,15,0.96) 0%, rgba(15,15,15,0.94) 44%, rgba(15,15,15,0.25) 64%, rgba(15,15,15,0) 78%), url(/img/hero-room.jpg) right center / cover no-repeat; }
+.mural { background: linear-gradient(90deg, rgba(15,15,15,0.96) 0%, rgba(15,15,15,0.9) 46%, rgba(15,15,15,0.45) 100%), url(/img/hero-room.jpg) right center / cover no-repeat; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 44px; align-items: center; padding: 48px 0 56px; }
 .hero.solo { grid-template-columns: minmax(0, 1fr); padding: 44px 0 52px; }
 .hero.solo .txt { max-width: 500px; }
@@ -54,32 +56,32 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 .btn.gold:hover { background: #D29A52; }
 .btn.outline { border: 1.5px solid var(--gold); color: var(--gold); }
 .btn.outline:hover { background: var(--gold); color: var(--black); }
-.btn.dark { background: var(--black); color: var(--white); }
-.btn.dark:hover { background: #2A2A2A; }
+.btn.dark { border: 1.5px solid var(--gold); color: var(--gold); }
+.btn.dark:hover { background: var(--gold); color: var(--black); }
 .hero figcaption { font-size: 14px; color: var(--cover-soft); padding-top: 8px; }
 
 /* Panels */
 .pages { padding-top: 32px; padding-bottom: 52px; display: flex; flex-direction: column; gap: 26px; }
-.page { background: var(--white); border: 1px solid var(--rule); padding: 42px 44px; display: flex; flex-direction: column; gap: 18px; }
+.page { background: var(--panel); border: 1px solid var(--line); padding: 42px 44px; display: flex; flex-direction: column; gap: 18px; }
 .page h2 { font-size: 30px; line-height: 1.15; }
-.page h3 { font-size: 20px; color: var(--deep-gold); margin-top: 6px; }
+.page h3 { font-size: 20px; color: var(--gold); margin-top: 6px; }
 .page p, .page li { max-width: 66ch; }
-.page a { color: var(--deep-gold); text-underline-offset: 3px; }
+.page a { color: var(--gold); text-underline-offset: 3px; }
 .page a.btn.gold, .page a.btn.dark { text-decoration: none; }
 .page a.btn.gold { color: var(--black); }
-.page a.btn.dark { color: var(--white); }
-.callout { background: var(--paper); border-left: 4px solid var(--gold); padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
+.page a.btn.dark { color: var(--gold); }
+.callout { background: #211E19; border-left: 4px solid var(--gold); padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
 .callout p { max-width: 70ch; }
-.tag { font-family: var(--head); font-weight: 500; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--deep-gold); }
+.tag { font-family: var(--head); font-weight: 500; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
 .scroll { overflow-x: auto; }
 table { border-collapse: collapse; width: 100%; font-size: 16px; }
-th { font-family: var(--head); font-weight: 600; text-align: left; background: var(--black); color: var(--white); padding: 10px 14px; white-space: nowrap; }
-td { padding: 11px 14px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--head); font-weight: 600; text-align: left; background: var(--gold); color: var(--black); padding: 10px 14px; white-space: nowrap; }
+td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
 td.k { font-family: var(--head); font-weight: 600; }
 .split { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 36px; align-items: start; }
 .stack { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
-figcaption { font-size: 14px; color: var(--muted); padding-top: 8px; }
-.small { font-size: 15px; color: var(--muted); }
+figcaption { font-size: 14px; color: var(--cover-soft); padding-top: 8px; }
+.small { font-size: 15px; color: var(--cover-soft); }
 .cols3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
 .cols2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 36px; }
 .cols3 > div, .cols2 > div { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
@@ -96,7 +98,7 @@ figcaption { font-size: 14px; color: var(--muted); padding-top: 8px; }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
 /* Supporters band and footer */
-.band { background: var(--black); color: var(--white); }
+.band { background: var(--black); color: var(--white); border-top: 1px solid var(--line); }
 .band .in { padding-top: 40px; padding-bottom: 40px; display: flex; flex-direction: column; gap: 22px; }
 .band h2 { font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
 .funders { display: flex; flex-wrap: wrap; align-items: center; gap: 28px 48px; }
@@ -111,8 +113,7 @@ footer .links, footer .social { display: flex; gap: 6px 20px; flex-wrap: wrap; }
 footer .legal { color: var(--cover-soft); max-width: 80ch; }
 
 @media (max-width: 760px) {
-  .mural { background: var(--black); }
-  .mural::before { content: ""; display: block; height: 200px; background: url(/img/hero-room.jpg) 62% 38% / cover no-repeat; }
+  .mural { background: linear-gradient(rgba(15,15,15,0.82), rgba(15,15,15,0.82)), url(/img/hero-room.jpg) center / cover no-repeat; }
   .hero, .split { grid-template-columns: minmax(0, 1fr); }
   .hero { padding: 26px 0 36px; gap: 26px; }
   .hero .mark, .hero.solo .mark { width: 52px; height: 52px; }
