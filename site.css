@@ -1,10 +1,8 @@
 /* Central Outreach Hub: shared look for every page, per the COH brand rules.
    Website: Hub Black background, Cream text, Hub Gold accent. No other colours, no gradients.
    Gold is used only for the logo, rules and one emphasised phrase per headline.
-   Headlines: Rockwell Extra Bold (web fallback Rokkitt 800, then Georgia). Everything else: Outfit (fallback Calibri, Arial).
+   Headlines: Jost SemiBold. Body and third-level headings: Source Sans 3 (COH Brand Standard v1.0).
    Left-aligned. Capitals for short labels only. Generous space, one idea per section. */
-/* Headlines: Rockwell Extra Bold where the computer has it; Rokkitt (Google Fonts) everywhere else */
-@font-face{font-family:'COH Slab';src:local('Rockwell Extra Bold'),local('RockwellExtraBold'),local('Rockwell-ExtraBold');font-weight:800;font-style:normal}
 :root{
   --ink:#0F0F0F;          /* Hub Black */
   --gold:#C4873B;         /* Hub Gold */
@@ -19,15 +17,15 @@
   --divider:transparent;
   --divider-strong:transparent;
 }
-body{background:var(--ink) !important;color:var(--cream) !important;font-family:'Outfit',Calibri,Arial,sans-serif;line-height:1.6;text-align:left}
+body{background:var(--ink) !important;color:var(--cream) !important;font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif;line-height:1.6;text-align:left}
 ::selection{background:var(--gold);color:var(--ink)}
 
 /* All text is cream on black */
 .muted,.faint,.white,.lede,.block p,.callout .muted,.cta p{color:var(--cream) !important;opacity:1 !important}
 .accent{color:var(--cream) !important}
 
-/* Short labels: Outfit capitals in cream, a gold rule below */
-.label{font-family:'Outfit',Calibri,Arial,sans-serif;font-size:11px !important;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream) !important;font-weight:500;display:inline-block;padding:0 56px 12px 0 !important;border-bottom:1px solid var(--gold);margin-bottom:24px;text-align:left}
+/* Short labels: Source Sans 3 capitals in cream, a gold rule below */
+.label{font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif;font-size:11px !important;letter-spacing:0.18em;text-transform:uppercase;color:var(--cream) !important;font-weight:500;display:inline-block;padding:0 56px 12px 0 !important;border-bottom:1px solid var(--gold);margin-bottom:24px;text-align:left}
 
 /* Section rule: a short gold line, left-aligned */
 .hr{width:48px !important;height:1px !important;background:var(--gold) !important}
@@ -38,7 +36,7 @@ a.link:hover,.prose a:hover,.block a:hover,.callout a:hover,a.tel:hover,.contact
 a.tel{white-space:nowrap}
 
 /* One button style: cream with black text */
-.btn,.cta a{display:inline-flex !important;align-items:center;justify-content:center;min-height:48px;padding:12px 32px;background:var(--cream) !important;color:var(--ink) !important;border:none;font:500 13px/1.2 'Outfit',Calibri,Arial,sans-serif;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn,.cta a{display:inline-flex !important;align-items:center;justify-content:center;min-height:48px;padding:12px 32px;background:var(--cream) !important;color:var(--ink) !important;border:none;font:500 13px/1.2 'Source Sans 3',Calibri,'Segoe UI',sans-serif;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;cursor:pointer}
 .btn:hover,.cta a:hover{text-decoration:underline;text-underline-offset:4px}
 .btn:active,.cta a:active{transform:translateY(1px)}
 
@@ -61,7 +59,7 @@ nav .nav-back:hover,nav .nav-a:hover{text-decoration:underline;text-decoration-c
 footer.site-footer{padding:64px 32px 48px;text-align:left}
 footer.site-footer .mx{max-width:1000px;margin:0 auto}
 footer.site-footer svg.mark{display:block}
-footer.site-footer .name{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:22px;color:var(--cream);margin-top:18px}
+footer.site-footer .name{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:22px;color:var(--cream);margin-top:18px}
 footer.site-footer .addr{font-size:14px;line-height:1.7;color:var(--cream);margin-top:6px}
 footer.site-footer .find-row{display:flex;justify-content:flex-start;flex-wrap:wrap;align-items:center;gap:0 14px;margin-top:20px}
 footer.site-footer .find-link{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;color:var(--cream) !important;min-height:44px;display:inline-flex;align-items:center}
@@ -81,7 +79,7 @@ footer.site-footer .copy{font-size:12px;color:var(--cream);margin-top:12px}
 
 /* "This week at the Hub": the schedule posted on the wall */
 .notice{border:1px solid var(--cream);border-top:2px solid var(--gold);padding:20px 24px 18px;max-width:520px;text-align:left}
-.notice h2{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:26px;line-height:1.15;color:var(--cream);margin:0 0 10px;letter-spacing:0}
+.notice h2{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:26px;line-height:1.15;color:var(--cream);margin:0 0 10px;letter-spacing:0}
 .notice table{border-collapse:collapse;width:100%}
 .notice th,.notice td{text-align:left;vertical-align:top;padding:8px 0;border-bottom:1px solid var(--gold);font-size:16px;line-height:1.45;color:var(--cream)}
 .notice th{font-weight:500;padding-right:16px;white-space:nowrap;width:1%}
@@ -103,5 +101,19 @@ footer.site-footer .copy{font-size:12px;color:var(--cream);margin-top:12px}
   *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
 }
 
-/* Rockwell is wide: keep the name in the top bar on one line on phones */
+/* Keep the name in the top bar on one line on phones */
 @media(max-width:480px){.nav-logo span{font-size:15px !important;white-space:nowrap}}
+
+/* Brand Standard: third-level headings in Source Sans 3 SemiBold */
+h3{font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif !important;font-weight:600 !important;letter-spacing:0 !important}
+
+/* Artwork (pending Elder / Knowledge Keeper review): feathers beside the opening on wide screens, bison above the footer. Decorative only. */
+.hero-home{position:relative;overflow:hidden}
+.hero-home>.mx{position:relative;z-index:1}
+.art-feather{display:none;position:absolute;top:50%;width:150px;height:auto;pointer-events:none}
+.art-feather.l{left:calc(50% - 500px - 48px - 150px);transform:translateY(-45%) rotate(-12deg)}
+.art-feather.r{left:calc(50% + 500px + 48px);transform:translateY(-45%) scaleX(-1) rotate(-12deg)}
+@media(min-width:1260px){.art-feather{display:block}}
+.art-bison{padding:24px 32px 0}
+.art-bison img{width:260px;height:auto;display:block}
+@media(max-width:768px){.art-bison{padding:16px 16px 0}.art-bison img{width:180px}}

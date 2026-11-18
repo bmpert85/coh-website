@@ -179,18 +179,18 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:'Outfit',Calibri,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 button{font-family:inherit}
 img{display:block;max-width:100%;height:auto}
 .mx{max-width:1000px;margin:0 auto}
 .sec{padding:120px 32px}
 .sec+.sec{border-top:0.5px solid var(--divider)}
-h1,h2,h3,.serif{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800}
+h1,h2,h3,.serif{font-family:'Jost','Century Gothic',sans-serif;font-weight:600}
 h2{font-size:clamp(32px,4vw,52px);line-height:1.08;letter-spacing:-0.5px;color:var(--cream);margin-bottom:28px;max-width:640px}
 h2 em,h1 em{font-style:normal;color:var(--copper)}
 h3{font-size:22px;line-height:1.2;letter-spacing:-0.2px;color:var(--cream);margin-bottom:12px}
@@ -212,7 +212,7 @@ h3{font-size:22px;line-height:1.2;letter-spacing:-0.2px;color:var(--cream);margi
 nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-bottom:0.5px solid var(--divider)}
 .nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;min-height:44px}
-.nav-logo span{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:18px;color:var(--cream)}
+.nav-logo span{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:18px;color:var(--cream)}
 .nav-links{display:flex;gap:4px;align-items:center}
 .nav-a{font-size:12px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:0 14px;min-height:44px;display:inline-flex;align-items:center;transition:color .2s}
 
@@ -248,18 +248,18 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
 
 /* How the room works */
 .step{display:grid;grid-template-columns:80px 1fr;gap:32px;padding:40px 0;border-top:0.5px solid var(--divider-strong)}
-.step .n{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:40px;line-height:1;color:var(--cream)}
+.step .n{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:40px;line-height:1;color:var(--cream)}
 .step p{font-size:15px;line-height:1.7;color:var(--muted);max-width:640px}
 
 /* Activity to date: plain type, no animation */
 .fig{display:grid;grid-template-columns:200px 1fr;gap:32px;padding:40px 0;border-top:0.5px solid var(--divider-strong)}
-.fig .num{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:44px;line-height:1;color:var(--cream);margin-bottom:10px}
+.fig .num{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:44px;line-height:1;color:var(--cream);margin-bottom:10px}
 .fig .cap{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
 .fig p{font-size:15px;line-height:1.7;color:var(--muted);padding-top:4px}
 
 /* Video: loads only when someone taps play */
 .video{position:relative;aspect-ratio:16/9;background:var(--ink);margin:80px 0 0;max-width:820px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
-.video button{position:absolute;inset:0;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:none;border:0.5px solid var(--divider-strong);color:var(--cream);cursor:pointer;font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:22px}
+.video button{position:absolute;inset:0;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:none;border:0.5px solid var(--divider-strong);color:var(--cream);cursor:pointer;font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:22px}
 .video button .play{width:68px;height:68px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center}
 .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 
@@ -275,7 +275,7 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
 .legal{margin-top:28px;padding:24px 28px;background:transparent;border-left:2px solid var(--copper)}
 .legal p{font-size:14px;line-height:1.6;color:var(--muted)}
 .media{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:0 44px}
-.media a{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:18px;min-height:44px;display:inline-flex;align-items:center;color:var(--muted);text-decoration:none;transition:color .2s}
+.media a{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:18px;min-height:44px;display:inline-flex;align-items:center;color:var(--muted);text-decoration:none;transition:color .2s}
 .media a:hover{text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:4px}
 .center{text-align:left}
 
@@ -336,6 +336,9 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
 <main>
 <!-- 1. HERO -->
 <section id="hero" class="hero-home">
+  <!-- ARTWORK: feather and bison from the 2026-11 art handoff. Under the COH Brand Standard (Indigenous visual elements, rules 2 and 3) this needs review by the Elders, Knowledge Keepers or Indigenous partners connected to the work before it goes live. -->
+  <img src="/art/feather.webp" width="520" height="837" alt="" aria-hidden="true" loading="lazy" class="art-feather l">
+  <img src="/art/feather.webp" width="520" height="837" alt="" aria-hidden="true" loading="lazy" class="art-feather r">
   <div class="mx hero-grid">
     <div class="hero-title">
       <div class="label">Peer-led day space &middot; Downtown Calgary</div>
@@ -549,6 +552,7 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
 </main>
 
 <!-- 8. FOOTER -->
+<div class="art-bison" aria-hidden="true"><div class="mx"><img src="/art/bison.webp" width="900" height="580" alt="" loading="lazy"></div></div>
 <footer class="site-footer">
   <div class="mx">
     <svg class="mark" aria-hidden="true" width="36" height="36" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="fl"><circle cx="60" cy="60" r="55"/></clipPath></defs><circle cx="60" cy="60" r="56" stroke="#C4873B" stroke-width="4" fill="none"/><g clip-path="url(#fl)"><line x1="14" y1="78" x2="106" y2="78" stroke="#C4873B" stroke-width="3.5"/><line x1="60" y1="78" x2="36" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="44" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="52" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="60" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="68" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="76" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="84" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/></g></svg>
