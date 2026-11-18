@@ -1,0 +1,96 @@
+/* Central Outreach Hub: shared look for every page.
+   Light, flat ground. One dark band (the navigation, plus the home page opening).
+   One button style, one card style, one link style. All text at 4.5:1 or better. */
+:root{
+  --ground:#F5F0E8;      /* COH cream */
+  --card:#FFFCF7;
+  --line:#D9CFBF;
+  --text:#1C1916;
+  --muted:#4D463E;       /* 8.1:1 on ground */
+  --copper:#C4873B;      /* fills and rules only, never small text on the light ground */
+  --copper-text:#8B5419; /* 5.5:1 on ground */
+  --ink:#0F0F0F;         /* the dark band */
+  --on-ink:#F5F0E8;
+  --on-ink-muted:#CFC7BA;
+  --on-ink-link:#E2B07A;
+}
+body{background:var(--ground) !important;color:var(--text) !important;line-height:1.6}
+::selection{background:rgba(196,135,59,0.35);color:var(--text)}
+
+/* Text colours (shared class names across all pages) */
+.muted{color:var(--muted) !important}
+.faint{color:var(--muted) !important;opacity:1 !important}
+.white{color:var(--text) !important}
+.accent,.label{color:var(--copper-text) !important}
+.hr{background:var(--line) !important}
+
+/* One link style */
+a.link,.block a,.callout a,.prose a{color:var(--copper-text) !important;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a.link:hover,.block a:hover,.callout a:hover,.prose a:hover{text-decoration-thickness:2px}
+a.link:active{opacity:0.7}
+
+/* One button style */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 28px;background:var(--copper);color:var(--ink) !important;border:none;font:500 14px/1.2 'Outfit',system-ui,sans-serif;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background .15s,transform .1s}
+.btn:hover{background:#D4974B}
+.btn:active{transform:translateY(1px);background:#B3772F}
+
+/* One card style */
+.card{background:var(--card);border:1px solid var(--line);padding:28px}
+
+:focus-visible{outline:3px solid var(--copper-text);outline-offset:3px}
+
+/* Navigation: the dark band */
+nav{background:var(--ink) !important;backdrop-filter:none !important;border-bottom:none !important}
+nav .nav-back,nav .nav-btn,nav .nav-a{color:var(--on-ink-muted) !important;min-height:44px;display:inline-flex;align-items:center}
+nav .nav-back:hover,nav .nav-btn:hover,nav .nav-a:hover{color:var(--on-ink) !important}
+
+/* Subpage opening and content blocks on the light ground */
+.hero h1,.block h2{color:var(--text) !important}
+.hero .lede,.block p{color:var(--muted) !important}
+.callout{background:var(--card) !important;border:1px solid var(--line) !important;border-left:3px solid var(--copper) !important}
+.contact-row a{color:var(--copper-text) !important;text-decoration:underline;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+.cta{background:var(--card) !important;border:1px solid var(--line) !important}
+.cta p{color:var(--muted) !important}
+.cta a{background:var(--copper) !important;color:var(--ink) !important;min-height:48px;display:inline-flex !important;align-items:center}
+
+/* Footer */
+footer .heading{color:var(--text) !important}
+footer svg circle,footer svg line{stroke:var(--copper-text)}
+.find-link{color:var(--muted) !important;min-height:44px;display:inline-flex;align-items:center}
+.find-link:hover{color:var(--copper-text) !important}
+.find-sep{color:var(--muted) !important}
+.social-link{color:var(--muted) !important;min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.social-link:hover{color:var(--copper-text) !important}
+.photo-note{font-size:14px;line-height:1.6;color:var(--muted);max-width:560px;margin:20px auto 0}
+.photo-note a{color:var(--copper-text);text-decoration:underline;text-underline-offset:3px}
+
+/* Phone action bar: Call and Directions, phones only */
+.action-bar{display:none}
+@media(max-width:768px){
+  .action-bar{display:flex;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:300;padding:8px 16px calc(8px + env(safe-area-inset-bottom));background:var(--ink)}
+  .action-bar .btn{flex:1;min-height:48px;padding:10px 12px}
+  body{padding-bottom:72px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+
+/* Shared footer */
+footer.site-footer{padding:56px 32px 48px;text-align:center;border-top:1px solid var(--line)}
+footer.site-footer .name{font-family:'Instrument Serif',Georgia,serif;font-size:20px;color:var(--text);margin-top:16px}
+footer.site-footer .addr{font-size:15px;line-height:1.6;color:var(--muted);margin-top:6px}
+footer.site-footer .find-row{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:0 14px;margin-top:20px}
+footer.site-footer .find-link{font-size:13px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none}
+footer.site-footer .socials{display:flex;justify-content:center;gap:12px;margin-top:12px}
+footer.site-footer .copy{font-size:13px;color:var(--muted);margin-top:12px}
+footer.site-footer svg.mark{margin:0 auto;display:block}
+@media(max-width:768px){footer.site-footer{padding:48px 16px 40px}}
+
+/* Visit page: hours, place and phone first */
+.now{max-width:620px;margin:0 auto 28px;text-align:left;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--copper);padding:18px 22px}
+.now p{font-size:17px;line-height:1.6;color:var(--text);margin:0}
+.now p+p{margin-top:8px}
+.now b{font-weight:600}
+.now a{color:var(--copper-text);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+a.tel{color:var(--copper-text) !important;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
