@@ -129,3 +129,65 @@ footer .legal { color: var(--cover-soft); max-width: 80ch; }
   .btn { padding: 11px 18px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ---------------------------------------------------------------
+   Rhythm. One continuous page instead of stacked boxes: sections are
+   separated by space and a hairline, type is larger and looser, and
+   tables and callouts are quiet so the reading flows.
+   --------------------------------------------------------------- */
+::selection { background: var(--gold); color: var(--black); }
+body { font-size: 18px; line-height: 1.7; }
+.in { max-width: 1040px; padding-left: 28px; padding-right: 28px; }
+
+.hero { padding: 76px 0 88px; }
+.hero.solo { padding: 68px 0 80px; }
+.hero .txt { gap: 26px; }
+.hero .sub { font-size: 20px; line-height: 1.6; }
+
+.pages { padding-top: 0; padding-bottom: 0; gap: 0; }
+.page { background: none; border: 0; border-top: 1px solid var(--line); padding: 96px 0; gap: 24px; }
+.page:first-child { border-top: 0; }
+.page h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.12; margin-bottom: 6px; }
+.page h2:not(:first-child) { margin-top: 44px; }
+.page h3 { font-size: 22px; margin-top: 36px; }
+.page p, .page li { max-width: 68ch; }
+.page a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+li + li { margin-top: 8px; }
+.stack { gap: 22px; }
+.split { gap: 56px; align-items: center; }
+.cols3 { gap: 44px; }
+.cols2 { gap: 48px 64px; }
+.cols3 > div, .cols2 > div { gap: 10px; }
+.photos { gap: 28px 24px; margin-top: 8px; }
+.video { margin-top: 20px; }
+figcaption { padding-top: 10px; }
+
+table { font-size: 17px; }
+th { background: none; color: var(--gold); font-size: 13px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; padding: 0 20px 12px 0; border-bottom: 1px solid var(--gold); }
+td { padding: 20px 20px 20px 0; border-bottom: 1px solid var(--line); }
+td.k { font-size: 18px; white-space: nowrap; }
+
+.callout { background: var(--panel); border-left: 0; padding: 28px 32px; gap: 8px; margin-top: 8px; }
+.next { padding: 56px 0; }
+.band .in { padding-top: 72px; padding-bottom: 72px; gap: 26px; }
+.band h2:not(:first-child) { margin-top: 28px; }
+.funders { gap: 32px 56px; }
+footer .in { padding-top: 44px; padding-bottom: 52px; gap: 16px; }
+
+@media (max-width: 760px) {
+  body { font-size: 17px; line-height: 1.65; }
+  .in { padding-left: 22px; padding-right: 22px; }
+  .hero, .hero.solo { padding: 40px 0 52px; }
+  .hero .txt { gap: 20px; }
+  .hero .sub { font-size: 18px; }
+  .page { padding: 60px 0; gap: 20px; }
+  .page h2:not(:first-child) { margin-top: 36px; }
+  .page h3 { margin-top: 28px; }
+  .split { gap: 32px; }
+  .cols3, .cols2 { gap: 32px; }
+  .photos { gap: 18px 14px; }
+  td { padding: 16px 14px 16px 0; }
+  td.k { white-space: normal; }
+  .callout { padding: 22px 22px; }
+  .band .in { padding-top: 52px; padding-bottom: 52px; }
+}
