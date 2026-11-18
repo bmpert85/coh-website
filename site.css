@@ -127,8 +127,11 @@ h3{font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif !important;font-wei
   .art-eagle{right:-8px;top:-70px;width:210px}
 }
 
-/* Logo: Tamara's seal beside the name in the opening, and in the footer. The plain mark stays only at small sizes (top bar, favicon). */
+/* Logo: the original site mark (gold ring and rays) beside the name in the opening, and in the footer. */
 .lockup{display:flex;align-items:center;gap:36px}
-.lockup .seal{width:150px;height:auto;flex:none}
-.seal-foot{display:block;width:96px;height:auto}
-@media(max-width:768px){.lockup{gap:20px}.lockup .seal{width:88px}.seal-foot{width:80px}}
+.lockup .seal{width:132px;height:132px;flex:none}
+.seal-foot{display:block;width:56px;height:56px}
+@media(max-width:768px){.lockup{gap:20px}.lockup .seal{width:84px;height:84px}.seal-foot{width:48px;height:48px}}
+
+/* A heading that follows a paragraph inside the same block gets room above it */
+.block p+h2{margin-top:36px}
