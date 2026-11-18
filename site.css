@@ -36,7 +36,7 @@ a.link:hover,.prose a:hover,.block a:hover,.callout a:hover,a.tel:hover,.contact
 a.tel{white-space:nowrap}
 
 /* One button style: cream with black text */
-.btn,.cta a{display:inline-flex !important;align-items:center;justify-content:center;min-height:48px;padding:12px 32px;background:var(--cream) !important;color:var(--ink) !important;border:none;font:500 13px/1.2 'Source Sans 3',Calibri,'Segoe UI',sans-serif;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;cursor:pointer}
+.btn,.cta a{display:inline-flex !important;align-items:center;justify-content:center;min-height:48px;padding:12px 32px;background:transparent !important;color:var(--cream) !important;border:1px solid var(--gold);font:500 13px/1.2 'Source Sans 3',Calibri,'Segoe UI',sans-serif;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;cursor:pointer}
 .btn:hover,.cta a:hover{text-decoration:underline;text-underline-offset:4px}
 .btn:active,.cta a:active{transform:translateY(1px)}
 
@@ -78,15 +78,15 @@ footer.site-footer .copy{font-size:12px;color:var(--cream);margin-top:12px}
 .now b{font-weight:500}
 
 /* "This week at the Hub": the schedule posted on the wall */
-.notice{border:1px solid var(--cream);border-top:2px solid var(--gold);padding:20px 24px 18px;max-width:520px;text-align:left}
+.notice{border:0;border-left:2px solid var(--gold);padding:2px 0 2px 24px;max-width:520px;text-align:left}
 .notice h2{font-family:'Jost','Century Gothic',sans-serif;font-weight:600;font-size:26px;line-height:1.15;color:var(--cream);margin:0 0 10px;letter-spacing:0}
 .notice table{border-collapse:collapse;width:100%}
-.notice th,.notice td{text-align:left;vertical-align:top;padding:8px 0;border-bottom:1px solid var(--gold);font-size:16px;line-height:1.45;color:var(--cream)}
+.notice th,.notice td{text-align:left;vertical-align:top;padding:6px 0;border-bottom:0;font-size:16px;line-height:1.45;color:var(--cream)}
 .notice th{font-weight:500;padding-right:16px;white-space:nowrap;width:1%}
 .notice td{font-weight:400}
 .notice tr:last-child th,.notice tr:last-child td{border-bottom:0}
 .notice a.tel{font-weight:500}
-@media(max-width:768px){.notice{padding:14px 16px 10px}.notice h2{font-size:22px;margin-bottom:6px}.notice th,.notice td{padding-top:5px;padding-bottom:5px}.notice th{padding-right:12px}}
+@media(max-width:768px){.notice{padding:0 0 0 16px}.notice h2{font-size:22px;margin-bottom:6px}.notice th,.notice td{padding-top:5px;padding-bottom:5px}.notice th{padding-right:12px}}
 .hero .notice{margin:0 0 28px}
 
 /* Phone action bar: Call and Directions */
@@ -126,3 +126,9 @@ h3{font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif !important;font-wei
   .art-rose{left:-18px;bottom:-14px;width:150px}
   .art-eagle{right:-8px;top:-70px;width:210px}
 }
+
+/* Logo: Tamara's seal beside the name in the opening, and in the footer. The plain mark stays only at small sizes (top bar, favicon). */
+.lockup{display:flex;align-items:center;gap:36px}
+.lockup .seal{width:150px;height:auto;flex:none}
+.seal-foot{display:block;width:96px;height:auto}
+@media(max-width:768px){.lockup{gap:20px}.lockup .seal{width:88px}.seal-foot{width:80px}}
