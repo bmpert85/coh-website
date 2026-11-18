@@ -62,7 +62,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 
 /* Panels */
 .pages { padding-top: 32px; padding-bottom: 52px; display: flex; flex-direction: column; gap: 26px; }
-.page { background: var(--panel); border: 1px solid var(--line); padding: 42px 44px; display: flex; flex-direction: column; gap: 18px; }
+.page { display: flex; flex-direction: column; gap: 18px; }
 .page h2 { font-size: 30px; line-height: 1.15; }
 .page h3 { font-size: 20px; color: var(--gold); margin-top: 6px; }
 .page p, .page li { max-width: 66ch; }
@@ -70,6 +70,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 .page a.btn.gold, .page a.btn.dark { text-decoration: none; }
 .page a.btn.gold { color: var(--black); }
 .page a.btn.dark { color: var(--gold); }
+.page a.btn.dark:hover { color: var(--black); }
 .callout { background: #211E19; border-left: 4px solid var(--gold); padding: 16px 20px; display: flex; flex-direction: column; gap: 4px; }
 .callout p { max-width: 70ch; }
 .tag { font-family: var(--head); font-weight: 500; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
@@ -122,7 +123,6 @@ footer .legal { color: var(--cover-soft); max-width: 80ch; }
   .hero .sub { font-size: 17px; }
   .cols3, .cols2 { grid-template-columns: minmax(0, 1fr); }
   .photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-  .page { padding: 28px 20px; }
   .page h2 { font-size: 25px; }
   .topbar { padding: 12px 0; }
   .topbar nav { margin-left: 0; gap: 4px 18px; }
@@ -191,3 +191,10 @@ footer .in { padding-top: 44px; padding-bottom: 52px; gap: 16px; }
   .callout { padding: 22px 22px; }
   .band .in { padding-top: 52px; padding-bottom: 52px; }
 }
+
+/* Social links with icons */
+.social { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.social a { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.social a:hover { text-decoration: underline; }
+.social svg { width: 22px; height: 22px; flex: none; fill: var(--gold); }
+.page .social a { color: var(--cream); font-family: var(--head); font-weight: 500; }
