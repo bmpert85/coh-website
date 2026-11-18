@@ -107,13 +107,22 @@ footer.site-footer .copy{font-size:12px;color:var(--cream);margin-top:12px}
 /* Brand Standard: third-level headings in Source Sans 3 SemiBold */
 h3{font-family:'Source Sans 3',Calibri,'Segoe UI',sans-serif !important;font-weight:600 !important;letter-spacing:0 !important}
 
-/* Artwork (pending Elder / Knowledge Keeper review): feathers beside the opening on wide screens, bison above the footer. Decorative only. */
+/* Artwork (pending review by Elders, Knowledge Keepers or Indigenous partners): feather, wild rose, eagle, sweetgrass braid.
+   Printed softly into the page: partly transparent, screen-blended so it sits in the black and on the photos, edges faded. Decorative only. */
+.art{pointer-events:none;user-select:none;height:auto;mix-blend-mode:screen}
 .hero-home{position:relative;overflow:hidden}
 .hero-home>.mx{position:relative;z-index:1}
-.art-feather{display:none;position:absolute;top:50%;width:150px;height:auto;pointer-events:none}
-.art-feather.l{left:calc(50% - 500px - 48px - 150px);transform:translateY(-45%) rotate(-12deg)}
+.art-feather{display:none;position:absolute;top:50%;width:140px;opacity:.3;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent 100%);mask-image:linear-gradient(180deg,#000 55%,transparent 100%)}
+.art-feather.l{left:calc(50% - 500px - 48px - 140px);transform:translateY(-45%) rotate(-12deg)}
 .art-feather.r{left:calc(50% + 500px + 48px);transform:translateY(-45%) scaleX(-1) rotate(-12deg)}
 @media(min-width:1260px){.art-feather{display:block}}
-.art-bison{padding:24px 32px 0}
-.art-bison img{width:260px;height:auto;display:block}
-@media(max-width:768px){.art-bison{padding:16px 16px 0}.art-bison img{width:180px}}
+.photo-art{position:relative}
+.photo-art>img:first-child{display:block}
+.art-rose{position:absolute;left:-104px;bottom:-22px;width:250px;opacity:.62;-webkit-mask-image:radial-gradient(ellipse 64% 64% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 64% 64% at 50% 50%,#000 60%,transparent 100%)}
+.art-eagle{position:absolute;right:-40px;top:-104px;width:320px;opacity:.55;-webkit-mask-image:radial-gradient(ellipse 66% 66% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 66% 66% at 50% 50%,#000 60%,transparent 100%)}
+.art-braid{display:flex;justify-content:center;padding:8px 16px 0}
+.art-braid img{width:min(620px,90%);opacity:.6;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 18%,#000 82%,transparent 100%)}
+@media(max-width:768px){
+  .art-rose{left:-18px;bottom:-14px;width:150px}
+  .art-eagle{right:-8px;top:-70px;width:210px}
+}
