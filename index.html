@@ -222,7 +222,9 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
 .menu a{color:var(--muted);text-decoration:none;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;min-height:48px;display:flex;align-items:center;border-bottom:0.5px solid var(--divider)}
 
 /* Opening: the wordmark, three lines set left */
-.hero-home{padding:104px 32px 120px}
+.hero-home{padding:88px 32px 104px}
+.hero-grid{display:grid;grid-template-columns:1fr minmax(0,460px);grid-template-areas:"title notice" "text notice";column-gap:64px;align-items:start}
+.hero-title{grid-area:title}.hero-home .notice{grid-area:notice}.hero-text{grid-area:text}
 .hero-home h1{font-size:clamp(48px,6.4vw,80px);line-height:0.98;letter-spacing:-1.5px;color:var(--cream);margin-bottom:36px}
 .hero-home p{font-size:19px;line-height:1.7;font-weight:300;color:var(--body);max-width:560px}
 .hero-home p+p{margin-top:16px;color:var(--muted);font-weight:400;font-size:16px}
@@ -281,6 +283,7 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
   .cards.c3{grid-template-columns:1fr 1fr}
   .fig{grid-template-columns:1fr;gap:12px}
 }
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr;grid-template-areas:"title" "notice" "text"}.hero-home .notice{margin-bottom:20px}}
 @media(max-width:768px){
   .nav-links{display:none}
   .menu-btn{display:inline-flex;align-items:center}
@@ -333,15 +336,28 @@ nav{position:sticky;top:0;z-index:100;padding:0 20px;background:#0F0F0F;border-b
 <main>
 <!-- 1. HERO -->
 <section id="hero" class="hero-home">
-  <div class="mx">
-    <div class="label">Peer-led day space &middot; Downtown Calgary</div>
-    <h1>Central<br>Outreach<br>Hub</h1>
-    <p>A warm room, a hot meal and peers who have been there. Walk in on Tuesdays, 10:30 a.m. to 12:30 p.m., and Thursdays, 12:00 to 2:00 p.m. You do not need an appointment, a referral or ID to come in.</p>
-    <p>Lower level of Central United Church, 131 7th Avenue SW. Call <a href="tel:+14036067892">403-606-7892</a>.</p>
-    <!-- HELD (CONFIRM 1): "Use the door on 1 Street SW beside the lift." goes after the address once the walk-through confirms the door. -->
+  <div class="mx hero-grid">
+    <div class="hero-title">
+      <div class="label">Peer-led day space &middot; Downtown Calgary</div>
+      <h1>Central<br>Outreach<br>Hub</h1>
+    </div>
+    <section class="notice" aria-labelledby="this-week">
+      <h2 id="this-week">This week at the Hub</h2>
+      <table>
+        <tr><th scope="row">Tuesday</th><td>10:30 a.m. to 12:30 p.m.</td></tr>
+        <tr><th scope="row">Thursday</th><td>12:00 to 2:00 p.m.</td></tr>
+        <tr><th scope="row">Meal</th><td>A hot meal both days</td></tr>
+        <!-- HELD (CONFIRM 1): add "Use the door on 1 Street SW beside the lift." once the walk-through confirms the door. -->
+        <tr><th scope="row">Where</th><td>Lower level of Central United Church, 131 7th Avenue SW</td></tr>
+        <tr><th scope="row">Call</th><td><a class="tel" href="tel:+14036067892">403-606-7892</a></td></tr>
+      </table>
+    </section>
+    <div class="hero-text">
+    <p>A warm room, a hot meal and peers who have been there. You do not need an appointment, a referral or ID to come in.</p>
     <div class="actions">
       <a class="btn" href="#visit">Hours and directions</a>
       <a class="quiet" href="#connect">For funders and partners</a>
+    </div>
     </div>
   </div>
 </section>
