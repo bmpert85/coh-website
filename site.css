@@ -145,8 +145,8 @@ body { font-size: 18px; line-height: 1.7; }
 .hero .sub { font-size: 20px; line-height: 1.6; }
 
 .pages { padding-top: 0; padding-bottom: 0; gap: 0; }
-.page { background: none; border: 0; border-top: 1px solid var(--line); padding: 96px 0; gap: 24px; }
-.page:first-child { border-top: 0; }
+.page { border: 0; background: linear-gradient(var(--line), var(--line)) top / 100% 1px no-repeat; padding: 96px 0; gap: 24px; }
+.page:first-child { background: none; }
 .page h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.12; margin-bottom: 6px; }
 .page h2:not(:first-child) { margin-top: 44px; }
 .page h3 { font-size: 22px; margin-top: 36px; }
