@@ -1,0 +1,4 @@
+# Send the default Netlify address to the real domain so search engines
+# list centraloutreachhub.ca instead of a duplicate copy.
+https://centraloutreachhub.netlify.app/*  https://centraloutreachhub.ca/:splat  301!
+http://centraloutreachhub.netlify.app/*   https://centraloutreachhub.ca/:splat  301!
