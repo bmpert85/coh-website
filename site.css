@@ -1,8 +1,10 @@
 /* Central Outreach Hub: shared look for every page, per the COH brand rules.
    Website: Hub Black background, Cream text, Hub Gold accent. No other colours, no gradients.
    Gold is used only for the logo, rules and one emphasised phrase per headline.
-   Headlines: Instrument Serif (fallback Georgia). Everything else: Outfit (fallback Calibri, Arial).
+   Headlines: Rockwell Extra Bold (web fallback Rokkitt 800, then Georgia). Everything else: Outfit (fallback Calibri, Arial).
    Left-aligned. Capitals for short labels only. Generous space, one idea per section. */
+/* Headlines: Rockwell Extra Bold where the computer has it; Rokkitt (Google Fonts) everywhere else */
+@font-face{font-family:'COH Slab';src:local('Rockwell Extra Bold'),local('RockwellExtraBold'),local('Rockwell-ExtraBold');font-weight:800;font-style:normal}
 :root{
   --ink:#0F0F0F;          /* Hub Black */
   --gold:#C4873B;         /* Hub Gold */
@@ -59,7 +61,7 @@ nav .nav-back:hover,nav .nav-a:hover{text-decoration:underline;text-decoration-c
 footer.site-footer{padding:64px 32px 48px;text-align:left}
 footer.site-footer .mx{max-width:1000px;margin:0 auto}
 footer.site-footer svg.mark{display:block}
-footer.site-footer .name{font-family:'Instrument Serif',Georgia,serif;font-size:22px;color:var(--cream);margin-top:18px}
+footer.site-footer .name{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:22px;color:var(--cream);margin-top:18px}
 footer.site-footer .addr{font-size:14px;line-height:1.7;color:var(--cream);margin-top:6px}
 footer.site-footer .find-row{display:flex;justify-content:flex-start;flex-wrap:wrap;align-items:center;gap:0 14px;margin-top:20px}
 footer.site-footer .find-link{font-size:11px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;text-decoration:none;color:var(--cream) !important;min-height:44px;display:inline-flex;align-items:center}
@@ -79,7 +81,7 @@ footer.site-footer .copy{font-size:12px;color:var(--cream);margin-top:12px}
 
 /* "This week at the Hub": the schedule posted on the wall */
 .notice{border:1px solid var(--cream);border-top:2px solid var(--gold);padding:20px 24px 18px;max-width:520px;text-align:left}
-.notice h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:26px;line-height:1.15;color:var(--cream);margin:0 0 10px;letter-spacing:0}
+.notice h2{font-family:'COH Slab','Rokkitt',Georgia,serif;font-weight:800;font-size:26px;line-height:1.15;color:var(--cream);margin:0 0 10px;letter-spacing:0}
 .notice table{border-collapse:collapse;width:100%}
 .notice th,.notice td{text-align:left;vertical-align:top;padding:8px 0;border-bottom:1px solid var(--gold);font-size:16px;line-height:1.45;color:var(--cream)}
 .notice th{font-weight:500;padding-right:16px;white-space:nowrap;width:1%}
@@ -100,3 +102,6 @@ footer.site-footer .copy{font-size:12px;color:var(--cream);margin-top:12px}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
 }
+
+/* Rockwell is wide: keep the name in the top bar on one line on phones */
+@media(max-width:480px){.nav-logo span{font-size:15px !important;white-space:nowrap}}
