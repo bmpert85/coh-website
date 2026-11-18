@@ -25,7 +25,7 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:#0F0F0F;color:#E8E2D8;font-family:'Outfit',system-ui,sans-serif;margin:0;-webkit-font-smoothing:antialiased;line-height:1.6}
+body{background:#0F0F0F;color:#F5F0E8;font-family:'Outfit',Calibri,Arial,sans-serif;margin:0;-webkit-font-smoothing:antialiased;line-height:1.6}
 a{color:inherit}
 img{display:block;max-width:100%}
 .mx{max-width:760px;margin:0 auto}
@@ -34,43 +34,43 @@ img{display:block;max-width:100%}
 .heading{font-family:'Instrument Serif','Georgia',serif}
 .label{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#C4873B;margin-bottom:20px;font-weight:500}
 .accent{color:#C4873B}
-.muted{color:rgba(232,226,216,0.55)}
-.faint{color:rgba(232,226,216,0.3)}
+.muted{color:#F5F0E8}
+.faint{color:#F5F0E8}
 .white{color:#F5F0E8}
-.hr{width:100%;height:1px;background:rgba(232,226,216,0.08)}
+.hr{width:100%;height:1px;background:transparent}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;background:rgba(15,15,15,0.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,226,216,0.08)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;background:#0F0F0F;backdrop-filter:blur(16px);border-bottom:1px solid transparent}
 .nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-logo{display:flex;align-items:center;gap:12px;cursor:pointer;text-decoration:none}
-.nav-back{font-size:12px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:rgba(232,226,216,0.55);text-decoration:none;padding:8px 14px;transition:color 0.2s}
+.nav-back{font-size:12px;font-weight:400;letter-spacing:0.06em;text-transform:uppercase;color:#F5F0E8;text-decoration:none;padding:8px 14px;transition:color 0.2s}
 .nav-back:hover{color:#C4873B}
 
 .hero{padding:160px 32px 64px;text-align:center}
 .hero h1{font-family:'Instrument Serif','Georgia',serif;font-size:clamp(40px,5vw,60px);line-height:1.1;color:#F5F0E8;margin-bottom:28px}
-.hero .lede{font-size:18px;line-height:1.7;color:rgba(232,226,216,0.7);max-width:620px;margin:0 auto}
+.hero .lede{font-size:18px;line-height:1.7;color:#F5F0E8;max-width:620px;margin:0 auto}
 
 .block{margin-bottom:56px}
 .block h2{font-family:'Instrument Serif','Georgia',serif;font-size:28px;line-height:1.2;color:#F5F0E8;margin-bottom:20px}
-.block p{font-size:16px;line-height:1.85;color:rgba(232,226,216,0.75);margin-bottom:16px}
+.block p{font-size:16px;line-height:1.85;color:#F5F0E8;margin-bottom:16px}
 .block p:last-child{margin-bottom:0}
-.block a{color:#C4873B;text-decoration:none;border-bottom:1px solid rgba(196,135,59,0.4);transition:border-color 0.2s}
+.block a{color:#C4873B;text-decoration:none;border-bottom:1px solid #C4873B;transition:border-color 0.2s}
 .block a:hover{border-bottom-color:#C4873B}
 
-.callout{padding:24px 28px;background:rgba(196,135,59,0.06);border-left:2px solid #C4873B;margin-top:24px}
+.callout{padding:24px 28px;background:transparent;border-left:2px solid #C4873B;margin-top:24px}
 .callout .white{font-size:15px;font-weight:500;margin-bottom:4px}
 .callout .muted{font-size:14px;line-height:1.6}
 
-.cta{padding:36px 32px;text-align:center;border:1px solid rgba(232,226,216,0.08);margin-top:48px;border-radius:2px}
-.cta p{color:rgba(232,226,216,0.7);font-size:16px;margin-bottom:18px}
+.cta{padding:36px 32px;text-align:center;border:1px solid transparent;margin-top:48px;border-radius:2px}
+.cta p{color:#F5F0E8;font-size:16px;margin-bottom:18px}
 .cta a{display:inline-block;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;background:#C4873B;color:#0F0F0F;padding:14px 28px;text-decoration:none;transition:opacity 0.2s}
 .cta a:hover{opacity:0.85}
 
-.social-link{font-size:12px;color:rgba(232,226,216,0.3);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.social-link{font-size:12px;color:#F5F0E8;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
 .social-link:hover{color:#C4873B}
 .find-row{display:flex;justify-content:center;flex-wrap:wrap;align-items:center;gap:18px;margin-top:28px}
-.find-link{font-size:12px;color:rgba(232,226,216,0.45);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+.find-link{font-size:12px;color:#F5F0E8;text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
 .find-link:hover{color:#C4873B}
-.find-sep{color:rgba(232,226,216,0.18);font-size:12px}
+.find-sep{color:transparent;font-size:12px}
 
 @media(max-width:768px){
   .hero{padding:130px 20px 48px}
@@ -114,7 +114,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 20px;background:rg
 <div class="pad"><div class="mx"><div class="hr"></div></div></div>
 <footer class="site-footer">
   <div class="mx">
-    <svg class="mark" aria-hidden="true" width="36" height="36" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="fl"><circle cx="60" cy="60" r="55"/></clipPath></defs><circle cx="60" cy="60" r="56" stroke="rgba(232,226,216,0.3)" stroke-width="4" fill="none"/><g clip-path="url(#fl)"><line x1="14" y1="78" x2="106" y2="78" stroke="rgba(232,226,216,0.3)" stroke-width="3.5"/><line x1="60" y1="78" x2="36" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="44" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="52" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="60" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="68" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="76" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="84" y2="113" stroke="rgba(232,226,216,0.3)" stroke-width="3" stroke-linecap="round"/></g></svg>
+    <svg class="mark" aria-hidden="true" width="36" height="36" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="fl"><circle cx="60" cy="60" r="55"/></clipPath></defs><circle cx="60" cy="60" r="56" stroke="#C4873B" stroke-width="4" fill="none"/><g clip-path="url(#fl)"><line x1="14" y1="78" x2="106" y2="78" stroke="#C4873B" stroke-width="3.5"/><line x1="60" y1="78" x2="36" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="44" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="52" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="60" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="68" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="76" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/><line x1="60" y1="78" x2="84" y2="113" stroke="#C4873B" stroke-width="3" stroke-linecap="round"/></g></svg>
     <div class="name">Central Outreach Hub</div>
     <p class="addr">An open space in downtown Calgary &middot; 131 7th Avenue SW, Calgary, Alberta &middot; <a class="tel" href="tel:+14036067892">403-606-7892</a></p>
     <div class="find-row">
