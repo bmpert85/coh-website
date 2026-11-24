@@ -2,3 +2,6 @@
 # list centraloutreachhub.ca instead of a duplicate copy.
 https://centraloutreachhub.netlify.app/*  https://centraloutreachhub.ca/:splat  301!
 http://centraloutreachhub.netlify.app/*   https://centraloutreachhub.ca/:splat  301!
+
+# Short link for the Cozy Feet Kits fundraiser. 302 so the destination can change later.
+/cozy  https://www.zeffy.com/en-CA/donation-form/cozy-feet-kits  302
