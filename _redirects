@@ -5,3 +5,6 @@ http://centraloutreachhub.netlify.app/*   https://centraloutreachhub.ca/:splat  
 
 # Short link for the Cozy Feet Kits fundraiser. 302 so the destination can change later.
 /cozy  https://www.zeffy.com/en-CA/donation-form/cozy-feet-kits  302
+
+# Short link for general donations. 302 so the destination can change later.
+/donate  https://www.zeffy.com/en-CA/donation-form/86c5e853-69aa-439e-adbc-c7ef2dca9dd7  302
